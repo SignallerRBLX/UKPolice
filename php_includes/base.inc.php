@@ -1,12 +1,11 @@
 <?php
 require('db.php');
 
-/* <---UNCOMMENT BELOW IF YOU USE SSL--->
+
 if(!isset($_SERVER['HTTPS']) && !strstr($_SERVER["HTTP_CF_VISITOR"], "https")) {
 	header("Location: https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", true, 303);
 	exit();
 }
-*/
 
 if(isset($_SERVER["HTTP_CF_CONNECTING_IP"])) $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
 
